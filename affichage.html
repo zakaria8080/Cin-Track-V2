@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinéTrack - affichage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#111116] text-white">
+
+  <header class="bg-[#1c1c24] p-4">
+    <div class="mx-auto flex max-w-6xl justify-between">
+      <h1 class="text-xl font-bold">
+        Ciné<span class="text-red-500">Track</span>
+      </h1>
+      <a href="index.html" class="text-sm text-gray-400"> Catalogue</a>
+    </div>
+  </header>
+
+  <main class="mx-auto grid max-w-6xl gap-5 p-4 lg:grid-cols-3">
+
+    <section class="lg:col-span-2">
+      <h2 class="mb-3 text-xl font-bold">Films et séries</h2>
+
+      <p id="message" class="mb-3 text-sm"></p>
+
+      <table class="w-full rounded-lg bg-[#1c1c24] text-left text-sm">
+        <thead class="text-gray-400">
+          <tr>
+            <th class="p-2">Titre</th>
+            <th>Type</th>
+            <th>Année</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="list"></tbody>
+      </table>
+    </section>
+
+    <aside class="h-fit rounded-lg bg-[#1c1c24] p-3">
+      <h2 id="form_title" class="mb-3 font-bold">Ajouter</h2>
+
+      <form id="form" class="space-y-2">
+        <input type="hidden" id="id">
+
+        <input id="title" placeholder="Titre" class="w-full rounded bg-[#25252e] p-2 text-sm outline-none">
+
+        <select id="type" class="w-full rounded bg-[#25252e] p-2 text-sm">
+          <option value="movie">Film</option>
+          <option value="series">Série</option>
+        </select>
+
+        <input id="year" type="number" placeholder="Année" class="w-full rounded bg-[#25252e] p-2 text-sm outline-none">
+
+        <input id="genres" placeholder="Genres" class="w-full rounded bg-[#25252e] p-2 text-sm outline-none">
+
+        <input id="image" placeholder="URL de l'image" class="w-full rounded bg-[#25252e] p-2 text-sm outline-none">
+
+        <textarea id="description" rows="3" placeholder="Description"
+          class="w-full rounded bg-[#25252e] p-2 text-sm outline-none"></textarea>
+
+        <ul id="errors" class="text-xs text-red-400"></ul>
+
+        <button class="w-full rounded bg-red-600 p-2 text-sm">Enregistrer</button>
+      </form>
+    </aside>
+
+  </main>
+
+  <script type="module" src="js/affichage.js"></script>
+
+</body>
+
+</html>
