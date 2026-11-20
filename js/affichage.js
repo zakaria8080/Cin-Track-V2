@@ -74,7 +74,7 @@ function validate() {
         problems.push("Le titre doit contenir au moins 2 caractères.");
     }
 
-    if (year_input.value < 1888 || year_input.value > 2030) {
+    if (year_input.value < 1970 || year_input.value > 2026) {
         problems.push("L'année n'est pas valide.");
     }
 
